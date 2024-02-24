@@ -6,10 +6,11 @@ const port = 3000;
 
 // MySQL database connection configuration
 const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: 'Nikhil@123',
-  database: 'Leaderboard',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
+  waitForConnection: true,
 };
 
 // API to display current week leaderboard (Top 200)
